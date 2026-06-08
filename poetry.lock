@@ -354,7 +354,7 @@ version = "7.6.11"
 description = "Code coverage measurement for Python"
 optional = false
 python-versions = ">=3.9"
-groups = ["coverage"]
+groups = ["coverage", "test"]
 files = [
     {file = "coverage-7.6.11-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:eafea49da254a8289bed3fab960f808b322eda5577cb17a3733014928bbfbebd"},
     {file = "coverage-7.6.11-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:5a3f7cbbcb4ad95067a6525f83a6fc78d9cbc1e70f8abaeeaeaa72ef34f48fc3"},
@@ -1339,19 +1339,20 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests
 
 [[package]]
 name = "pytest-cov"
-version = "6.0.0"
+version = "6.2.1"
 description = "Pytest plugin for measuring coverage."
 optional = false
 python-versions = ">=3.9"
-groups = ["coverage"]
+groups = ["coverage", "test"]
 files = [
-    {file = "pytest-cov-6.0.0.tar.gz", hash = "sha256:fde0b595ca248bb8e2d76f020b465f3b107c9632e6a1d1705f17834c89dcadc0"},
-    {file = "pytest_cov-6.0.0-py3-none-any.whl", hash = "sha256:eee6f1b9e61008bd34975a4d5bab25801eb31898b032dd55addc93e96fcaaa35"},
+    {file = "pytest_cov-6.2.1-py3-none-any.whl", hash = "sha256:f5bc4c23f42f1cdd23c70b1dab1bbaef4fc505ba950d53e0081d0730dd7e86d5"},
+    {file = "pytest_cov-6.2.1.tar.gz", hash = "sha256:25cc6cc0a5358204b8108ecedc51a9b57b34cc6b8c967cc2c01a4e00d8a67da2"},
 ]
 
 [package.dependencies]
 coverage = {version = ">=7.5", extras = ["toml"]}
-pytest = ">=4.6"
+pluggy = ">=1.2"
+pytest = ">=6.2.5"
 
 [package.extras]
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "virtualenv"]
@@ -1956,4 +1957,4 @@ s2repoze = ["paste", "repoze.who", "zope.interface"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<4.0"
-content-hash = "435eef4315face4bc10b1d14a908dce6bf2a58844e79e08c66195b3401f628a7"
+content-hash = "a77d3431bc70b72b2ac5649f21357e748af7a6ee3f0a4bb6e711638fc971ae45"

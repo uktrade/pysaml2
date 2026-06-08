@@ -81,6 +81,7 @@ pyasn1 = "*"
 pymongo = ">=3.5, <5"
 pytest = ">=9.0"
 responses = "*"
+pytest-cov = "6.2.1"
 
 [tool.poetry.group.coverage]
 optional = true
