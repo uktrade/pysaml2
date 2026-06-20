@@ -20,7 +20,7 @@ classifiers = [
 ]
 requires-python = ">=3.11,<4.0"
 dependencies = [
-  "cryptography >=46.0.6",
+  "cryptography >=48.0.1",
   "defusedxml",
   "pyopenssl >=26.0.0",
   "python-dateutil",
