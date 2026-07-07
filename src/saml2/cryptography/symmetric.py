@@ -12,6 +12,11 @@ from warnings import warn as _warn
 import cryptography.fernet as _fernet
 import cryptography.hazmat.primitives.ciphers as _ciphers
 
+try:
+    import cryptography.hazmat.decrepit.ciphers as _cfb_ciphers
+except ImportError:
+    _cfb_ciphers = _ciphers  # assume the cryptography version does not have the decrepit change
+
 from .errors import SymmetricCryptographyError
 
 
@@ -105,7 +110,7 @@ class AESCipher:
 
     POSTFIX_MODE = {
         "cbc": _ciphers.modes.CBC,
-        "cfb": _ciphers.modes.CFB,
+        "cfb": _cfb_ciphers.modes.CFB,
     }
 
     AES_BLOCK_SIZE = int(_ciphers.algorithms.AES.block_size / 8)
